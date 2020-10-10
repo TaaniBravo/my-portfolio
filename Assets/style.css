@@ -3,27 +3,49 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-html {
+/* html {
     background-image: url(images/background.png);
     background-size: cover;
-}
+} */
 
 body {
-    background-color: rgb(11, 0, 85, .4);
+    background: 
+    linear-gradient(#1D116D, #00429B, #006CB8, #0093C3, #00B9C4, #41DDC1);
+    background-repeat: no-repeat;
+    background-size: cover;
     font: 18px;
     color: white;
 }
 
 h1 {
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     background-color: #1261A0;
+    width: 50%;
+}
+
+.topbar {
+    display: flex;
+    justify-content:space-between;
+    flex-direction: row;
 }
 
 nav {
     display: flex;
     align-items: top;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: right;
+    width: 50%;
+}
+
+.navbar li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+.navbar a {
+    margin-left: 5px;
+    text-decoration: none;
 }
 
 .containers {
@@ -36,3 +58,5 @@ nav {
     height: max-content;
     width: auto;
 }
+
+@media screen and max-height()
