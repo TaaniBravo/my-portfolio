@@ -1,12 +1,17 @@
+:root {
+    --darknavy: #1D116D;
+    --darkblue: #00429B;
+    --blue: #006CB8;
+    --midblue: #0093C3;
+    --turqoise: #00B9C4;
+    --lightblue: #41DDC1;
+    --fjalla: font-family: 'Fjalla One';
+}
+
 * {
     box-sizing: border-box;
     font-family: 'Fjalla One';
 }
-
-/* html {
-    background-image: url(images/background.png);
-    background-size: cover;
-} */
 
 body {
     background: 
@@ -53,6 +58,11 @@ nav {
     height: fit-content;
     align-items: center;
     margin: 0 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: var(--lightblue)
 }
 
 .button i {
@@ -60,13 +70,6 @@ nav {
    color: white !important;
 }
 
-
-/* .navbar li {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-} */
 .navbar a {
     margin-left: 5px;
     text-decoration: none;
@@ -81,13 +84,23 @@ main img {
 
 .containers {
     display: flex;
-    flex: auto;
-    background-color: #333;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: rgb(51, 51, 51, 0.7);
     color: white;
     border-radius: 25px;
     padding: 10px;
     height: max-content;
     width: 50%;
+}
+
+#aboutme {
+    max-width: 50%
+}
+
+#portfolio {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 h2 #ice {
@@ -96,6 +109,14 @@ h2 #ice {
 
 #aboutme {
     line-height: 1.4;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
 }
 
 @media screen and max-height()
