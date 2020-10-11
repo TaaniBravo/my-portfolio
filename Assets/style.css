@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Fjalla One';
 }
 
 /* html {
@@ -25,10 +25,17 @@ header {
 }
 
 h1 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Fjalla One';
     font-weight: bold;
-    width: 50%;
+    width: 250%;
+    height: 100%;
     padding: 50px;
+}
+
+h1 #quote {
+    font-size: .5em;
+    margin-left: 5px;
+    color: #41DDC1;
 }
 
 nav {
@@ -65,6 +72,13 @@ nav {
     text-decoration: none;
 }
 
+main img {
+    max-width: 50%;
+    height: auto;
+    margin: 10px;
+    border-radius: 20px;
+}
+
 .containers {
     display: flex;
     flex: auto;
@@ -73,7 +87,15 @@ nav {
     border-radius: 25px;
     padding: 10px;
     height: max-content;
-    width: auto;
+    width: 50%;
+}
+
+h2 #ice {
+    color: #DFF7FA;
+}
+
+#aboutme {
+    line-height: 1.4;
 }
 
 @media screen and max-height()
