@@ -1,3 +1,4 @@
+/* All of my variables that I apply throughout the stylesheet for consistent code. */
 :root {
     --darknavy: #1D116D;
     --darkblue: #00429B;
@@ -8,20 +9,30 @@
     --fjalla: font-family: 'Fjalla One';
 }
 
+/* Setting the box sizing for the page and makes all the font throughout 'Fjalla One' and colored white so I don't have to reapply everytime. */
 * {
     box-sizing: border-box;
     font-family: 'Fjalla One';
     color: white;
+    font: 18px;
 }
 
+/* This code keeps my background gradient stretched out through the page rather than when the content ends. */
+html, body {
+    margin: 0;
+    height: 100%;
+    width: fit-content;
+}
+
+/* Makes the background colors as well as making sure covers the height of the page. */
 body {
     background: 
     linear-gradient(#1D116D, #00429B, #006CB8, #0093C3, #00B9C4, #41DDC1);
     background-repeat: no-repeat;
     background-size: cover;
-    font: 18px;
 }
 
+/* The first flex boxes that consist of my h1, the quote, and my social media buttons */
 header {
     display: flex;
     flex-direction: row;
@@ -30,26 +41,45 @@ header {
     flex: 1;
 }
 
+/* Makes the h1 font bold, and gives some padding to the top and left of the block. */
 h1 {
-    font-family: 'Fjalla One';
     font-weight: bold;
-    width: 250%;
-    height: 100%;
     padding: 10px 0 0 50px;
 }
 
+/* Wanted the quote to be somewhat smaller so the font size is .5em to the h1 parent. Gave it 5px of margin so it sits in its own space even though right next to my name. Made the color --lightblue */
 h1 #quote {
     font-size: .5em;
     margin-left: 5px;
     color: #41DDC1;
 }
 
-nav {
-    display: flex;
-    align-items: top;
-    flex: 0 2 1;
+/* The added margin-left makes it so that the buttons sit on the far right of the screen while the h1 can sit with the quote on the far left. */
+.pagelinks, .socials {
     margin-left: auto;
-    
+}
+
+/* The Inline-flex allows the links to be set in a row and then the list type is set to none so I can use | to seperate the links. Margin left and right auto keep this thing in the middle of the other two blocks. Cursor is set to a pointer so that its known you can click on these items.  */
+.pagelinks li {
+    display: inline-flex;
+    list-style-type: none;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+/* Text decoration so the links down have underlines.  */
+li a {
+    text-decoration: none;
+}
+
+li a:hover {
+    color: var(--lightblue);
+}
+
+.socials {
+    margin-right: 10px;
 }
 
 .button {
@@ -63,25 +93,14 @@ nav {
     cursor: pointer;
 }
 
-.button:hover {
-    color: var(--lightblue)
-}
-
 .button i {
    font-size: 3em;
-}
-
-.navbar a {
-    margin-left: 5px;
-    text-decoration: none;
 }
 
 main {
     display: flex;
     flex-direction: row;
-    /* background-color: rgb(51, 51, 51, 0.7);
-    border-radius: 25px;
-    padding: 10px; */
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 5px;
     width: 100%;
@@ -102,24 +121,30 @@ section {
     border-radius: 25px;
     padding: 10px;
     margin: 0 5px 0 5px;
-}
-
-section p {
-    flex: 1 1 auto;
+    flex: 1;
 }
 
 section h2 {
-    justify-content: center;
     align-self: flex-start;
 }
 
-.aboutme {
-    display: inline-flex;
+section p {
+    align-self: flex-end;
     line-height: 1.4;
+}
+
+
+.aboutme, .projects {
+    display: inline-flex;
+}
+
+.aboutme h2 p {
+    flex-direction: column;
 }
 
 .projects {
     margin: 10px;
+    flex-direction: column;
 }
 
 h2 #ice {
