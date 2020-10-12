@@ -11,6 +11,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Fjalla One';
+    color: white;
 }
 
 body {
@@ -19,7 +20,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font: 18px;
-    color: white;
 }
 
 header {
@@ -27,6 +27,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex: 1;
 }
 
 h1 {
@@ -34,7 +35,7 @@ h1 {
     font-weight: bold;
     width: 250%;
     height: 100%;
-    padding: 50px;
+    padding: 10px 0 0 50px;
 }
 
 h1 #quote {
@@ -46,8 +47,9 @@ h1 #quote {
 nav {
     display: flex;
     align-items: top;
-    justify-content: right;
-    width: 50%;
+    flex: 0 2 1;
+    margin-left: auto;
+    
 }
 
 .button {
@@ -66,8 +68,7 @@ nav {
 }
 
 .button i {
-   font-size: 4em;
-   color: white !important;
+   font-size: 3em;
 }
 
 .navbar a {
@@ -75,40 +76,54 @@ nav {
     text-decoration: none;
 }
 
+main {
+    display: flex;
+    flex-direction: row;
+    /* background-color: rgb(51, 51, 51, 0.7);
+    border-radius: 25px;
+    padding: 10px; */
+    justify-content: space-between;
+    margin: 5px;
+    width: 100%;
+    flex: 1;
+}
+
 main img {
-    max-width: 50%;
-    height: auto;
+    min-width: 33vh;
+    max-height: 33vh;
     margin: 10px;
     border-radius: 20px;
+    object-fit: contain;
+    align-self: center;
 }
 
-.containers {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+section {
     background-color: rgb(51, 51, 51, 0.7);
-    color: white;
     border-radius: 25px;
     padding: 10px;
-    height: max-content;
-    width: 50%;
+    margin: 0 5px 0 5px;
 }
 
-#aboutme {
-    max-width: 50%
+section p {
+    flex: 1 1 auto;
 }
 
-#portfolio {
-    display: flex;
-    flex-wrap: wrap;
+section h2 {
+    justify-content: center;
+    align-self: flex-start;
+}
+
+.aboutme {
+    display: inline-flex;
+    line-height: 1.4;
+}
+
+.projects {
+    margin: 10px;
 }
 
 h2 #ice {
     color: #DFF7FA;
-}
-
-#aboutme {
-    line-height: 1.4;
 }
 
 footer {
